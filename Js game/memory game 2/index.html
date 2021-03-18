@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>memori game 2</title>
+</head>
+<body>
+    <div class="main">
+        <div class="reveal">
+            <h2 id="number">?????</h2>
+        </div>
+        <div>
+            <h2>Score</h2>
+            <h2 id="score">0</h2>
+        </div>
+        <div>
+            <h2>Time Left</h2>
+            <h2 class="time-left">60</h2>
+        </div>
+        <div class="input">
+            <input id="number-guess" class="" type="number" placeholder="What's your guess?">
+        </div>
+        <div id="result">
+            <!-- result shown here -->
+        </div>
+
+        <div class="button-container">
+            <div class="start">
+                <button onclick="start()">Start</button>
+            </div>
+            <div class="next">
+                <button onclick="next()">next</button>
+            </div>
+            <div class="check">
+                <button onclick="check()">Check</button>
+            </div>
+            <div class="reset">
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+
+        <div id="history">
+            <!-- History shwon here -->
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
