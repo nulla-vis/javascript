@@ -1,0 +1,58 @@
+h1, h2 {
+    font-size: 60px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+.container {
+    width: 600px;
+    margin: auto;
+    /* border: 1px solid black;   */
+    display: flex; 
+    flex-wrap: wrap;
+    cursor: url(../img/palu1.png), auto;
+}
+
+.container:active {
+   cursor: url(../img/palu2.png), auto; 
+}
+
+.tanah {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    /* margin: auto; */
+}
+
+.tanah::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100px; /* jangan sampai ukuran background tanah melebihi ukuran background tikus, ntar tidak bisa di klik */
+    background: url(../img/tanah.png) bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    bottom: -25px;
+}
+
+.tikus {
+    width: 100%; /* sesuai wadahnya, yaitu tanah (div tikus berada dalam div tanah */
+    height: 100%; /* sesuai wadahnya, yaitu tanah (div tikus berada dalam div tanah*/
+    background: url(../img/tikus.png) bottom center no-repeat;
+    background-size: 65%;
+    position: absolute;
+    top: 160px;
+    transition: top 0.3s;
+     /* border: 1px solid black;   */
+}
+
+.tanah.muncul .tikus{
+    top: -15px;
+    /* cursor: pointer; */
+}
